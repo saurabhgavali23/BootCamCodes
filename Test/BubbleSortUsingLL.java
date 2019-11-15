@@ -22,6 +22,7 @@ public class BubbleSortUsingLL {
 		if(list.head==null)
 		{
 			list.head=nn;
+			size++;
 		}
 		else
 		{
@@ -30,8 +31,10 @@ public class BubbleSortUsingLL {
 			{
 				en=en.next;
 				size++;
+				//System.out.println(size);
 			}
 			en.next=nn;
+			
 		}
 		return list;
 	}
@@ -59,10 +62,10 @@ public class BubbleSortUsingLL {
 		Node p=list.head;
 		Node q=list.head.next;
 		int i=0;
-		for(int j=0;j<size;j++)
+		for(int j=0;j<size-1;j++)
 		{
 			i=0;
-			while(i<size)
+			while(i<size-1)
 			{
 				if(p.data>q.data)
 				{
@@ -87,6 +90,7 @@ public class BubbleSortUsingLL {
 		list=addNode(list, 10);
 		list=addNode(list, 5);
 		list=addNode(list, 9);
+	//	list=addNode(list, 2);
 		list=addNode(list, 1);
 		
 		printList(list);

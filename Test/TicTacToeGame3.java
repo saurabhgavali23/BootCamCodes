@@ -150,22 +150,29 @@ public class TicTacToeGame3 {
 			}
 		}
 		
-		System.out.println("====TicTocToeGame2====");
-		display(arr1);
-		System.out.println();
+		System.out.println("====TicTocToeGame3====");
+		System.out.println("1 Player\n2 Player\n");
+		System.out.println("Enter your choice");
+		Scanner s=new Scanner(System.in);
+		int ch=s.nextInt();
+		switch(ch)
+		{
+		
+		case 1:
+		//display(arr1);
+		//System.out.println();
 	
 		for(int i=0;i<5;i++)
 		{
-		//	System.out.println("Enter the player 1 position");
-			Scanner s=new Scanner(System.in);
+			//System.out.println("Enter the player 1 position");
+			
 		//	int pos=s.nextInt();
-			//player1Move(arr, arr1, pos);
 			computerMove(arr, arr1);
 			display(arr1);
 	
 			if(checkWhoWins(arr,1))
 			{
-				System.out.println("Player 1 is won");
+				System.out.println("Computer is won");
 				break;
 			}
 			
@@ -180,12 +187,50 @@ public class TicTacToeGame3 {
 			int pos1=s.nextInt();
 			player2Move(arr, arr1, pos1);
 			display(arr1);
-		//	display2(arr);
 			if(checkWhoWins(arr,2))
 			{
 				System.out.println("Player 2 is won");
 				break;
 			}
+		}
+			break;
+		
+		case 2:
+			display(arr1);
+			System.out.println();
+		
+			for(int i=0;i<5;i++)
+			{
+				System.out.println("Enter the player 1 position");
+				
+				int pos=s.nextInt();
+				player1Move(arr, arr1, pos);
+				display(arr1);
+		
+				if(checkWhoWins(arr,1))
+				{
+					System.out.println("Player 1 is won");
+					break;
+				}
+				
+				  if(i==4) 
+				  { 
+					  System.out.println("NoBudy won"); 
+					  break;
+				  }
+				 
+				
+				System.out.println("Enter the player 2 position");
+				int pos1=s.nextInt();
+				player2Move(arr, arr1, pos1);
+				display(arr1);
+				if(checkWhoWins(arr,2))
+				{
+					System.out.println("Player 2 is won");
+					break;
+				}
+			}
+				break;
 		}
 	}
 }

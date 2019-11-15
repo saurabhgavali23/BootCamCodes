@@ -8,7 +8,8 @@ public class AddElementInArrayByPos {
 		
 		int pos=3;
 		int n=77;
-		for(int i=arr.length-1;i>pos-1;i--)
+		System.out.println(arr.length);
+		for(int i=arr.length-1;i>pos;i--)
 		{
 			arr[i]=arr[i-1];
 		}
