@@ -3,7 +3,7 @@ package Test;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class NumberToBinary {
+public class DecimalToBinary {
 
 	public static void decToBin(int n)
 	{
