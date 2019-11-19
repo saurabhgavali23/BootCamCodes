@@ -1,39 +1,28 @@
 package Test;
 
+import java.util.Scanner;
+
 public class StopWatch extends Thread {
 	
-	public void run()
-	{
-		for(int i=0;i<5;i++)
-		{
-			try
-			{
-				Thread.sleep(500);
-			}
-			catch(InterruptedException e)
-			{
-				e.printStackTrace();
-			}
-			
-			System.out.println(i);
-		}
-	}
+	
+	
 	public static void main(String[] args) {
 		
-		StopWatch s=new StopWatch();
-		StopWatch s1=new StopWatch();
 		
-		s.start();
-		
-		try
-		{
-			s.join(1000);
-		}
-		catch(Exception e)
-		{
-			System.out.println(e);
-		}
-		
-		s1.start();
+		Scanner s=new Scanner(System.in);
+			System.out.println("Press button to Start");
+			String str=s.nextLine();
+			
+			long time1=System.currentTimeMillis();
+			
+			System.out.println("Press button to Stop");
+			String str1=s.nextLine();
+			
+			
+			long time2=System.currentTimeMillis();
+			
+			
+			long milliSec=time2-time1;
+			System.out.println(milliSec/1000+" "+"second");
 	}
 }

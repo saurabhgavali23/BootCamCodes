@@ -13,7 +13,7 @@ public class PrimePeramid {
 				System.out.print(" ");
 			}
 				
-			m=1;
+			m=0;
 			while(m<=i)
 			{
 				flag=0;

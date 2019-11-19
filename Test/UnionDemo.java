@@ -1,6 +1,8 @@
 package Test;
 
-public class ArrayUnion {
+import java.util.Arrays;
+
+public class UnionDemo {
 
 	public static void main(String ar[])
 	{
